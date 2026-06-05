@@ -1,0 +1,8 @@
+models/
+data/raw/zip/
+
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.zip

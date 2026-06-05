@@ -53,13 +53,22 @@ Bash/cmd: python3.11 -u src/inference/predict.py
 # Project Structure
 
 RLIP-Mental-Health-Checker/
+
 ├── data/
+
 ├── notebooks/
+
 ├── src/
+
 │   ├── data/
+
 │   ├── training/
+
 │   ├── inference/
+
 │   └── app/
+
 ├── requirements.txt
+
 └── README.md
 

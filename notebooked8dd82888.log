@@ -1,0 +1,110 @@
+[{"stream_name":"stderr","time":6.250545328,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.250652352,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.250656449,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.250658974,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":6.804488444,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.804562017,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.804568586,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.804572854,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":32.302351874,"data":"CUDA available: True\n"}
+,{"stream_name":"stdout","time":32.302420287,"data":"GPU: Tesla T4\n"}
+,{"stream_name":"stdout","time":32.302428014,"data":"Transformers version: 5.0.0\n"}
+,{"stream_name":"stdout","time":33.158771725,"data":"\n"}
+,{"stream_name":"stdout","time":33.158853773,"data":"Class distribution:\n"}
+,{"stream_name":"stdout","time":33.158865168,"data":"subreddit\n"}
+,{"stream_name":"stdout","time":33.158870977,"data":"normal                  16351\n"}
+,{"stream_name":"stdout","time":33.158876373,"data":"depression              15404\n"}
+,{"stream_name":"stdout","time":33.158881569,"data":"suicidal                10653\n"}
+,{"stream_name":"stdout","time":33.158888711,"data":"anxiety                  3888\n"}
+,{"stream_name":"stdout","time":33.158898046,"data":"bipolar                  2877\n"}
+,{"stream_name":"stdout","time":33.158901676,"data":"stress                   2669\n"}
+,{"stream_name":"stdout","time":33.158921626,"data":"personality disorder     1201\n"}
+,{"stream_name":"stdout","time":33.158928226,"data":"Name: count, dtype: int64\n"}
+,{"stream_name":"stdout","time":33.158933919,"data":"\n"}
+,{"stream_name":"stdout","time":33.158940604,"data":"Class weights:\n"}
+,{"stream_name":"stdout","time":33.158947359,"data":"  anxiety                   1.9490\n"}
+,{"stream_name":"stdout","time":33.158953601,"data":"  bipolar                   2.6338\n"}
+,{"stream_name":"stdout","time":33.158958815,"data":"  depression                0.4919\n"}
+,{"stream_name":"stdout","time":33.158963716,"data":"  normal                    0.4634\n"}
+,{"stream_name":"stdout","time":33.158968855,"data":"  personality disorder      6.3094\n"}
+,{"stream_name":"stdout","time":33.15897469,"data":"  stress                    2.8391\n"}
+,{"stream_name":"stdout","time":33.158980066,"data":"  suicidal                  0.7113\n"}
+,{"stream_name":"stderr","time":33.348037506,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":33.348082116,"data":"\n"}
+,{"stream_name":"stderr","time":33.348090765,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":51.067898557,"data":"DistilBertForSequenceClassification LOAD REPORT from: distilbert-base-uncased\n"}
+,{"stream_name":"stderr","time":51.067943995,"data":"Key                     | Status     | \n"}
+,{"stream_name":"stderr","time":51.067962877,"data":"------------------------+------------+-\n"}
+,{"stream_name":"stderr","time":51.067967204,"data":"vocab_layer_norm.bias   | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":51.067971122,"data":"vocab_transform.weight  | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":51.067974943,"data":"vocab_projector.bias    | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":51.067979146,"data":"vocab_transform.bias    | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":51.067983304,"data":"vocab_layer_norm.weight | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":51.067987299,"data":"classifier.bias         | MISSING    | \n"}
+,{"stream_name":"stderr","time":51.06799109,"data":"pre_classifier.bias     | MISSING    | \n"}
+,{"stream_name":"stderr","time":51.06799464,"data":"classifier.weight       | MISSING    | \n"}
+,{"stream_name":"stderr","time":51.067998283,"data":"pre_classifier.weight   | MISSING    | \n"}
+,{"stream_name":"stderr","time":51.068001992,"data":"\n"}
+,{"stream_name":"stderr","time":51.068005807,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":51.06800971,"data":"- UNEXPECTED\t:can be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stderr","time":51.068013867,"data":"- MISSING\t:those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.\n"}
+,{"stream_name":"stderr","time":51.06801783,"data":"\n"}
+,{"stream_name":"stderr","time":51.068021172,"data":"DistilBertForSequenceClassification LOAD REPORT from: distilbert-base-uncased\n"}
+,{"stream_name":"stderr","time":51.06802444,"data":"Key                     | Status     | \n"}
+,{"stream_name":"stderr","time":51.06803696,"data":"------------------------+------------+-\n"}
+,{"stream_name":"stderr","time":51.068041789,"data":"vocab_layer_norm.bias   | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":51.068046062,"data":"vocab_transform.weight  | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":51.068050314,"data":"vocab_projector.bias    | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":51.068054618,"data":"vocab_transform.bias    | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":51.068058948,"data":"vocab_layer_norm.weight | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":51.068063165,"data":"classifier.bias         | MISSING    | \n"}
+,{"stream_name":"stderr","time":51.068067445,"data":"pre_classifier.bias     | MISSING    | \n"}
+,{"stream_name":"stderr","time":51.068071726,"data":"classifier.weight       | MISSING    | \n"}
+,{"stream_name":"stderr","time":51.068076004,"data":"pre_classifier.weight   | MISSING    | \n"}
+,{"stream_name":"stderr","time":51.068080304,"data":"\n"}
+,{"stream_name":"stderr","time":51.06808457,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":51.068088863,"data":"- UNEXPECTED\t:can be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stderr","time":51.068093197,"data":"- MISSING\t:those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.\n"}
+,{"stream_name":"stderr","time":14118.616767653,"data":"There were missing keys in the checkpoint model loaded: ['distilbert.embeddings.LayerNorm.weight', 'distilbert.embeddings.LayerNorm.bias'].\n"}
+,{"stream_name":"stderr","time":14118.616859407,"data":"\n"}
+,{"stream_name":"stderr","time":14118.616868662,"data":"There were missing keys in the checkpoint model loaded: ['distilbert.embeddings.LayerNorm.weight', 'distilbert.embeddings.LayerNorm.bias'].\n"}
+,{"stream_name":"stderr","time":14118.617972278,"data":"There were unexpected keys in the checkpoint model loaded: ['distilbert.embeddings.LayerNorm.beta', 'distilbert.embeddings.LayerNorm.gamma'].\n"}
+,{"stream_name":"stderr","time":14118.617999671,"data":"\n"}
+,{"stream_name":"stderr","time":14118.618004273,"data":"There were unexpected keys in the checkpoint model loaded: ['distilbert.embeddings.LayerNorm.beta', 'distilbert.embeddings.LayerNorm.gamma'].\n"}
+,{"stream_name":"stdout","time":14119.130600363,"data":"\n"}
+,{"stream_name":"stdout","time":14119.130636504,"data":"Training complete!\n"}
+,{"stream_name":"stdout","time":14119.13064082,"data":"Model saved to: /kaggle/working/mental_health_classifier\n"}
+,{"stream_name":"stdout","time":14120.035237215,"data":"\n"}
+,{"stream_name":"stdout","time":14120.035280414,"data":"Text: gusto ko nang mamatay\n"}
+,{"stream_name":"stdout","time":14120.0352864,"data":"Predicted Label: normal\n"}
+,{"stream_name":"stdout","time":14120.035290788,"data":"Score: 0.9999986886978149\n"}
+,{"stream_name":"stdout","time":14120.03529488,"data":"\n"}
+,{"stream_name":"stdout","time":14120.035298161,"data":"Text: i want to die\n"}
+,{"stream_name":"stdout","time":14120.03530151,"data":"Predicted Label: suicidal\n"}
+,{"stream_name":"stdout","time":14120.035305314,"data":"Score: 0.9920716881752014\n"}
+,{"stream_name":"stdout","time":14120.035308698,"data":"\n"}
+,{"stream_name":"stdout","time":14120.035313438,"data":"Text: I struggle with impulsivity and emotional regulation.\n"}
+,{"stream_name":"stdout","time":14120.035320769,"data":"Predicted Label: normal\n"}
+,{"stream_name":"stdout","time":14120.035323534,"data":"Score: 0.9999964237213135\n"}
+,{"stream_name":"stdout","time":14120.035325803,"data":"\n"}
+,{"stream_name":"stdout","time":14120.035327965,"data":"Text: I'm concerned about my alcohol consumption.\n"}
+,{"stream_name":"stdout","time":14120.035330333,"data":"Predicted Label: normal\n"}
+,{"stream_name":"stdout","time":14120.035332596,"data":"Score: 0.9997428059577942\n"}
+,{"stream_name":"stdout","time":14120.499937878,"data":"subreddit\n"}
+,{"stream_name":"stdout","time":14120.499985664,"data":"Normal                  16351\n"}
+,{"stream_name":"stdout","time":14120.499991716,"data":"Depression              15404\n"}
+,{"stream_name":"stdout","time":14120.499995619,"data":"Suicidal                10653\n"}
+,{"stream_name":"stdout","time":14120.499999354,"data":"Anxiety                  3888\n"}
+,{"stream_name":"stdout","time":14120.500003025,"data":"Bipolar                  2877\n"}
+,{"stream_name":"stdout","time":14120.500006844,"data":"Stress                   2669\n"}
+,{"stream_name":"stdout","time":14120.50001129,"data":"Personality disorder     1201\n"}
+,{"stream_name":"stdout","time":14120.500015994,"data":"Name: count, dtype: int64\n"}
+,{"stream_name":"stderr","time":14125.970732326,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":14125.970773231,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":14126.110551416,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":14126.110579202,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":14126.707321712,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":14127.072737627,"data":"[NbConvertApp] Writing 370989 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":14129.343191212,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":14130.192013264,"data":"[NbConvertApp] Writing 589387 bytes to __results__.html\n"}
+]

@@ -64,7 +64,7 @@ dataset = dataset.train_test_split(
 
 # Load tokenizer
 tokenizer = AutoTokenizer.from_pretrained(
-    "distilbert-base-uncased"
+    "facebook/xlm-roberta-large"
 )
 
 # Tokenize text
@@ -81,9 +81,9 @@ dataset = dataset.map(
     batched=True
 )
 
-# Load DistilBERT model
+# XLM-RoBERTa model
 model = AutoModelForSequenceClassification.from_pretrained(
-    "distilbert-base-uncased",
+    "facebook/xlm-roberta-large",
     num_labels=len(labels)
 )
 

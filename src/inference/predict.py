@@ -80,6 +80,8 @@ def classify_text(text):
     return label, confidence
 
 
+print(model.config.id2label)
+print(model.config.label2id)
 
 
 text = input("Enter text: ")

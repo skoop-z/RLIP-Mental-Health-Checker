@@ -75,6 +75,7 @@ RLIP-Mental-Health-Checker/
 # Running the Website 
 
 Bash/cmd: pip install flask transformers torch
+
 Bash/cmd:python3.11 -u src/app/app.py
 
 Then copy-paste the url to any browser: http://localhost:5000

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Joy Took a Day Off — an AI that covers her shift. AI-powered mental health screening through text or voice.">
+  <title>Joy Took a Day Off — AI Mental Health Screening</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Ambient background -->
+  <div class="bg-scene" aria-hidden="true">
+    <div class="bg-rays"></div>
+    <div class="bokeh bokeh-1"></div>
+    <div class="bokeh bokeh-2"></div>
+    <div class="bokeh bokeh-3"></div>
+    <div class="bokeh bokeh-4"></div>
+    <div class="bokeh bokeh-5"></div>
+    <div class="bokeh bokeh-6"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" data-view="landing">
+        <span class="nav-logo-orb" aria-hidden="true"></span>
+        Joy
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#assessment-preview">Assessment</a></li>
+        <li><a href="#footer">About</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="btn btn-ghost" type="button" data-view="landing">Sign In</button>
+        <button class="btn btn-primary" type="button" data-flow="assessment">Start Assessment</button>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== LANDING VIEW ===== -->
+  <div id="view-landing" class="view active">
+    <main id="main-content">
+
+      <!-- Hero -->
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="container hero-content">
+          <div class="hero-text">
+            <p class="section-label animate-fade-in-up">Joy Took a Day Off</p>
+            <h1 id="hero-heading" class="headline-xl animate-fade-in-up stagger-1">
+              Understand Your Feelings Through <span class="text-gradient">AI-Powered Mental Health Screening</span>
+            </h1>
+            <p class="hero-subtitle animate-fade-in-up stagger-2">
+              An AI that covers her shift — express your thoughts freely through text or voice. Our classifier analyzes patterns in your responses to provide compassionate insights in a safe, private space.
+            </p>
+            <div class="hero-ctas animate-fade-in-up stagger-3">
+              <button class="btn btn-primary btn-lg" type="button" data-flow="assessment">Start Assessment</button>
+              <a href="#how-it-works" class="btn btn-secondary btn-lg">Learn More</a>
+            </div>
+            <div class="hero-trust-badges animate-fade-in-up stagger-4">
+              <span class="trust-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                Privacy Protected
+              </span>
+              <span class="trust-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                Screening Only — Not Diagnosis
+              </span>
+              <span class="trust-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                All Ages Welcome
+              </span>
+            </div>
+          </div>
+          <div class="hero-visual animate-fade-in-up stagger-2">
+            <div class="hero-orb-wrapper">
+              <div class="ai-orb ai-orb-xl" aria-hidden="true">
+                <div class="ai-orb-glow"></div>
+                <div class="ai-orb-ring"></div>
+                <div class="ai-orb-core"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works -->
+      <section id="how-it-works" class="section" aria-labelledby="how-heading">
+        <div class="container">
+          <header class="section-header">
+            <span class="section-label">Process</span>
+            <h2 id="how-heading" class="section-title">How It Works</h2>
+            <p class="section-subtitle">A simple, guided journey from expression to understanding — designed to feel as natural as a conversation.</p>
+          </header>
+          <div class="steps-grid">
+            <div class="steps-connector" aria-hidden="true"></div>
+            <article class="glass-card step-card animate-float-subtle">
+              <div class="step-icon" aria-hidden="true">💭</div>
+              <p class="step-number">Step 01</p>
+              <h3 class="step-title">Share Your Thoughts</h3>
+              <p class="step-desc">Freely express feelings through text or voice in a judgment-free space.</p>
+            </article>
+            <article class="glass-card step-card animate-float-subtle" style="animation-delay: 0.5s">
+              <div class="step-icon" aria-hidden="true">💬</div>
+              <p class="step-number">Step 02</p>
+              <h3 class="step-title">Answer Guided Questions</h3>
+              <p class="step-desc">Respond to compassionate, AI-guided prompts tailored to your input.</p>
+            </article>
+            <article class="glass-card step-card animate-float-subtle" style="animation-delay: 1s">
+              <div class="step-icon" aria-hidden="true">🧠</div>
+              <p class="step-number">Step 03</p>
+              <h3 class="step-title">AI Analyzes Responses</h3>
+              <p class="step-desc">Our classifier identifies patterns across mental health categories.</p>
+            </article>
+            <article class="glass-card step-card animate-float-subtle" style="animation-delay: 1.5s">
+              <div class="step-icon" aria-hidden="true">📊</div>
+              <p class="step-number">Step 04</p>
+              <h3 class="step-title">Receive Insights</h3>
+              <p class="step-desc">Get clear results, explanations, and actionable recommendations.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Assessment Preview -->
+      <section id="assessment-preview" class="section demo-section" aria-labelledby="demo-heading">
+        <div class="container">
+          <header class="section-header">
+            <span class="section-label">Interface Preview</span>
+            <h2 id="demo-heading" class="section-title">Conversational Assessment</h2>
+            <p class="section-subtitle">A calm, ChatGPT-inspired interface designed for emotional safety and ease of use.</p>
+          </header>
+          <div class="glass-card demo-preview">
+            <div class="demo-preview-header">
+              <div class="ai-orb ai-orb-sm" aria-hidden="true">
+                <div class="ai-orb-glow"></div>
+                <div class="ai-orb-core"></div>
+              </div>
+              <p class="assessment-question">"Can you describe how you've been feeling recently?"</p>
+            </div>
+            <div class="demo-input-mock">Take your time. Tell us what's been on your mind lately...</div>
+            <div class="demo-toolbar-mock">
+              <div style="display:flex;gap:8px;align-items:center">
+                <button class="btn btn-icon" type="button" aria-label="Voice input" data-flow="voice">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v4M8 23h8"/></svg>
+                </button>
+                <span class="char-counter">142 / 2,000</span>
+              </div>
+              <button class="btn btn-primary" type="button" data-flow="assessment">Continue</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section id="features" class="section" aria-labelledby="features-heading">
+        <div class="container">
+          <header class="section-header">
+            <span class="section-label">Capabilities</span>
+            <h2 id="features-heading" class="section-title">Built for Trust & Accessibility</h2>
+            <p class="section-subtitle">Every feature is designed with privacy, inclusivity, and clinical responsibility in mind.</p>
+          </header>
+          <div class="features-grid">
+            <article class="glass-card feature-card">
+              <div class="feature-icon blue" aria-hidden="true">🧠</div>
+              <h3 class="feature-title">AI Mental Health Analysis</h3>
+              <p class="feature-desc">Advanced NLP classifier trained on validated datasets to identify emotional patterns across nine categories.</p>
+            </article>
+            <article class="glass-card feature-card">
+              <div class="feature-icon purple" aria-hidden="true">🎙️</div>
+              <h3 class="feature-title">Voice-to-Text Input</h3>
+              <p class="feature-desc">Speak naturally with real-time transcription — ideal when writing feels difficult.</p>
+            </article>
+            <article class="glass-card feature-card">
+              <div class="feature-icon green" aria-hidden="true">📋</div>
+              <h3 class="feature-title">Guided Assessment Questions</h3>
+              <p class="feature-desc">Adaptive prompts that meet you where you are, without clinical jargon or pressure.</p>
+            </article>
+            <article class="glass-card feature-card">
+              <div class="feature-icon yellow" aria-hidden="true">🌍</div>
+              <h3 class="feature-title">Multilingual Support</h3>
+              <p class="feature-desc">Express yourself in your preferred language with inclusive, culturally aware processing.</p>
+            </article>
+            <article class="glass-card feature-card">
+              <div class="feature-icon red" aria-hidden="true">🔒</div>
+              <h3 class="feature-title">Privacy Protection</h3>
+              <p class="feature-desc">End-to-end encryption and no persistent storage of personal responses by default.</p>
+            </article>
+            <article class="glass-card feature-card">
+              <div class="feature-icon teal" aria-hidden="true">⚡</div>
+              <h3 class="feature-title">Real-Time Insights</h3>
+              <p class="feature-desc">Instant classification results with confidence scores and plain-language explanations.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="footer" class="footer" role="contentinfo">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-brand">
+              <a href="#" class="nav-logo" data-view="landing">
+                <span class="nav-logo-orb" aria-hidden="true"></span>
+                Joy
+              </a>
+              <p>An AI-powered mental health screening platform — Joy took a day off, and an AI covers her shift. For awareness and early intervention, not medical diagnosis.</p>
+            </div>
+            <div class="footer-col">
+              <h4>Product</h4>
+              <ul>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#" data-flow="assessment">Start Assessment</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Legal</h4>
+              <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Disclaimer</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Resources</h4>
+              <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Research Information</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p class="footer-disclaimer">
+              <strong>Important:</strong> Joy is a screening and awareness tool. Results do not constitute a medical diagnosis. If you are in crisis, please contact emergency services or a mental health professional immediately.
+            </p>
+            <p class="footer-copy">&copy; 2026 Joy Took a Day Off — RLIP Mental Health AI</p>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <!-- ===== ASSESSMENT FLOW VIEW ===== -->
+  <div id="view-assessment" class="view">
+    <div class="view-flow active" id="flow-assessment">
+      <div class="assessment-panel">
+        <div class="assessment-header">
+          <div class="ai-orb ai-orb-sm" aria-hidden="true">
+            <div class="ai-orb-glow"></div>
+            <div class="ai-orb-core"></div>
+          </div>
+          <p class="assessment-question" id="assessment-question">Can you describe how you've been feeling recently?</p>
+        </div>
+        <p class="input-hint" id="input-hint">This is your space. Write as much or as little as you need — there is no wrong way to share.</p>
+        <div class="glass-card chat-input-area">
+          <label for="assessment-input" class="sr-only">Your response</label>
+          <textarea
+            id="assessment-input"
+            class="chat-textarea"
+            placeholder="Take your time. Tell us what's been on your mind lately."
+            maxlength="2000"
+            rows="10"
+            aria-describedby="char-count input-hint"
+          ></textarea>
+          <div class="chat-toolbar">
+            <div style="display:flex;gap:8px;align-items:center">
+              <button class="btn btn-icon" type="button" aria-label="Switch to voice input" data-flow="voice">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v4M8 23h8"/></svg>
+              </button>
+              <span class="char-counter" id="char-count" aria-live="polite">0 / 2,000</span>
+            </div>
+          </div>
+        </div>
+        <div class="assessment-actions">
+          <button class="btn btn-secondary" type="button" data-view="landing">Back</button>
+          <button class="btn btn-primary btn-lg" type="button" id="btn-continue" data-flow="processing">Continue</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== VOICE INPUT VIEW ===== -->
+  <div id="view-voice" class="view">
+    <div class="view-flow active">
+      <div class="voice-panel">
+        <div class="mic-state-badge" id="mic-state-badge" data-state="ready" role="status">
+          <span class="mic-state-indicator" aria-hidden="true"></span>
+          <span id="mic-state-text">Microphone Ready</span>
+        </div>
+        <p class="voice-status" id="voice-status" aria-live="polite">Tap the microphone when you're ready to speak</p>
+        <span class="recording-timer hidden" id="recording-timer" aria-live="off">00:00</span>
+        <div class="mic-button-wrapper">
+          <div class="mic-ring" aria-hidden="true"></div>
+          <div class="mic-ring" aria-hidden="true"></div>
+          <button class="mic-button" type="button" aria-label="Start recording" id="mic-button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>
+          </button>
+        </div>
+        <div class="waveform" id="waveform" aria-hidden="true" role="presentation">
+          <div class="waveform-bar"></div>
+          <div class="waveform-bar"></div>
+          <div class="waveform-bar"></div>
+          <div class="waveform-bar"></div>
+          <div class="waveform-bar"></div>
+          <div class="waveform-bar"></div>
+          <div class="waveform-bar"></div>
+          <div class="waveform-bar"></div>
+        </div>
+        <p class="mic-permission-help hidden" id="mic-permission-help"></p>
+        <div class="glass-card transcription-box">
+          <p class="transcription-label">Live Transcription</p>
+          <p class="transcription-text empty" id="transcription-text">Your words will appear here as you speak...</p>
+        </div>
+        <div class="assessment-actions" style="justify-content:center;margin-top:24px">
+          <button class="btn btn-secondary" type="button" data-flow="assessment">Use Text Instead</button>
+          <button class="btn btn-primary btn-lg" type="button" data-flow="processing">Continue</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PROCESSING VIEW ===== -->
+  <div id="view-processing" class="view">
+    <div class="view-flow active">
+      <div class="processing-panel">
+        <div class="ai-orb ai-orb-xl" aria-hidden="true">
+          <div class="ai-orb-glow"></div>
+          <div class="ai-orb-ring"></div>
+          <div class="ai-orb-core"></div>
+        </div>
+        <p class="processing-text is-shimmer" id="processing-text" aria-live="polite">Analyzing your response...</p>
+        <div class="processing-dots" aria-hidden="true">
+          <span class="processing-dot"></span>
+          <span class="processing-dot"></span>
+          <span class="processing-dot"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== RESULTS VIEW ===== -->
+  <div id="view-results" class="view">
+    <div class="view-flow active" style="justify-content:flex-start;padding-top:calc(var(--nav-height) + 32px)">
+      <div class="results-panel">
+        <div class="results-header">
+          <div>
+            <span class="section-label">Your Results</span>
+            <h2 class="headline-lg">Mental Health Classification</h2>
+          </div>
+          <span class="risk-badge moderate" id="risk-badge" role="status">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            Moderate Stress Indicators
+          </span>
+        </div>
+
+        <div class="results-body">
+          <div class="glass-card glass-card-static primary-prediction-card" id="primary-prediction-card">
+            <p class="primary-prediction-rank">Primary Classification</p>
+            <h3 class="primary-prediction-label" id="primary-prediction-label">Depression</h3>
+            <p class="primary-prediction-confidence" id="primary-prediction-confidence">87%</p>
+            <p class="primary-prediction-summary" id="primary-prediction-summary">Your responses suggest elevated stress patterns. Results are for screening purposes only.</p>
+          </div>
+
+          <div class="glass-card glass-card-static classification-breakdown-card">
+            <h3>Classification Breakdown</h3>
+            <p class="breakdown-subtitle">All nine categories ranked by confidence — scroll to view</p>
+            <div class="classification-scroll" id="classification-scroll" tabindex="0" role="list" aria-label="Classification breakdown ranked by confidence">
+              <!-- Populated dynamically -->
+            </div>
+          </div>
+
+          <div class="glass-card glass-card-static themes-panel">
+            <h3>Detected Emotional Themes</h3>
+            <div class="theme-tags" id="theme-tags">
+              <span class="theme-tag">Work &amp; Pressure</span>
+              <span class="theme-tag">Sleep &amp; Rest</span>
+            </div>
+          </div>
+
+          <div class="glass-card glass-card-static explanation-panel">
+            <h3>What This Means</h3>
+            <p id="explanation-text">Your responses suggest elevated stress patterns, particularly related to work pressure and sleep difficulties.</p>
+          </div>
+
+          <div class="glass-card glass-card-static recommendations-panel">
+            <h3>Recommendations</h3>
+            <ul class="recommendation-list" id="recommendations-list">
+              <li>Practice daily mindfulness or breathing exercises for 10–15 minutes</li>
+              <li>Establish a consistent sleep schedule and wind-down routine</li>
+              <li>Consider speaking with a mental health professional</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="disclaimer-banner" role="note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <span><strong>Important:</strong> This result is for screening purposes only and does not constitute a medical diagnosis. Please consult a qualified healthcare professional for clinical evaluation.</span>
+        </div>
+
+        <div class="results-actions">
+          <button class="btn btn-primary" type="button" data-flow="assessment">Take Another Assessment</button>
+          <button class="btn btn-secondary" type="button" data-view="landing">Return Home</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wireframe navigation (demo) -->
+  <div class="flow-nav" aria-label="Wireframe screen navigation">
+    <button class="btn btn-secondary active-flow" type="button" data-view="landing">Landing</button>
+    <button class="btn btn-secondary" type="button" data-flow="assessment">Assessment</button>
+    <button class="btn btn-secondary" type="button" data-flow="voice">Voice</button>
+    <button class="btn btn-secondary" type="button" data-flow="processing">Processing</button>
+    <button class="btn btn-secondary" type="button" data-flow="results">Results</button>
+  </div>
+
+  <div class="wireframe-badge" aria-hidden="true">Joy UI v1.1</div>
+
+  <style>
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

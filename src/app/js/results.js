@@ -92,7 +92,7 @@ export function renderResults(data, sourceText) {
 
 export async function classifyText(text) {
   const { mockClassification } = await import('./constants.js');
-
+  
   try {
     const response = await fetch('/api/classify', {
       method: 'POST',

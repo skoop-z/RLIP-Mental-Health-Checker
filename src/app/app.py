@@ -1,13 +1,21 @@
 """Flask server for Joy — UI and classifier API."""
-
+def predict_pipeline(text):
+    print("🔥 PIPELINE CALLED 🔥")
+    
 from pathlib import Path
-
 from flask import Flask, jsonify, request, send_from_directory
 
 APP_DIR = Path(__file__).resolve().parent
 
-app = Flask(__name__, static_folder=str(APP_DIR), static_url_path="")
+app = Flask(
+    __name__,
+    static_folder=str(APP_DIR),
+    static_url_path=""
+)
 
+# --------------------------
+# UI ROUTES
+# --------------------------
 
 @app.route("/")
 def index():
@@ -19,31 +27,67 @@ def static_files(filename):
     return send_from_directory(APP_DIR, filename)
 
 
-@app.route("/api/health")
+# --------------------------
+# HEALTH CHECK
+# --------------------------
+
+@app.route("/api/health", methods=["GET"])
 def health():
-    from classifier_service import model_available
+    try:
+        from classifier_service import model_available
+        return jsonify({
+            "status": "ok",
+            "model_loaded": model_available()
+        })
+    except Exception as e:
+        return jsonify({
+            "status": "error",
+            "detail": str(e)
+        }), 500
 
-    return jsonify({"status": "ok", "model_loaded": model_available()})
 
+# --------------------------
+# CLASSIFICATION ENDPOINT
+# --------------------------
 
 @app.route("/api/classify", methods=["POST"])
 def classify():
-    payload = request.get_json(silent=True) or {}
-    text = payload.get("text", "")
+    data = request.get_json(silent=True) or {}
+    text = data.get("text", "").strip()
 
-    if not str(text).strip():
-        return jsonify({"error": "Text input is required."}), 400
+    if not text:
+        return jsonify({
+            "error": "Text input is required."
+        }), 400
 
     try:
-        from classifier_service import classify_text
+        # IMPORT YOUR PIPELINE HERE
+        from classifier_service import predict_pipeline
 
-        result = classify_text(text)
+        result = predict_pipeline(text)
+
         return jsonify(result)
-    except FileNotFoundError as exc:
-        return jsonify({"error": str(exc), "code": "model_missing"}), 503
-    except Exception as exc:
-        return jsonify({"error": "Classification failed.", "detail": str(exc)}), 500
 
+    except FileNotFoundError as e:
+        return jsonify({
+            "error": str(e),
+            "code": "model_missing"
+        }), 503
+
+    except Exception as e:
+        return jsonify({
+            "error": "Classification failed.",
+            "detail": str(e)
+        }), 500
+
+
+# --------------------------
+# MAIN
+# --------------------------
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    app.run(
+        debug=True,
+        host="0.0.0.0",
+        port=5000
+    )

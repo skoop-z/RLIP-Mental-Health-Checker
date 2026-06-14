@@ -13,6 +13,7 @@ const VIEWS = {
 let processingMessageIndex = 0;
 let processingMessageTimer = null;
 let lastInputText = '';
+let lastResult = null;
 
 function showView(viewKey) {
   Object.values(VIEWS).forEach((id) => {
@@ -26,9 +27,13 @@ function showView(viewKey) {
   if (viewKey === 'voice') {
     resetVoiceTranscript();
   }
-  if (viewKey !== 'voice') {
+  const prevView = window.__currentView;
+
+  if (prevView === 'voice' && viewKey !== 'voice') {
     stopVoice();
   }
+
+window.__currentView = viewKey;
 }
 
 function updateFlowNav(activeKey) {
@@ -95,9 +100,10 @@ async function startProcessing(fromVoice = false) {
   startProcessingMessages();
 
   try {
-    const result = await classifyText(text);
+    lastResult = await classifyText(text);
+
     stopProcessingMessages();
-    renderResults(result, text);
+    renderResults(lastResult, text);
     showView('results');
   } catch (err) {
     stopProcessingMessages();
@@ -127,14 +133,17 @@ function initNavigation() {
         startProcessing(fromVoice);
         return;
       }
-
+      
+      let lastResult = null;
       if (flow === 'results') {
-        import('./constants.js').then(({ mockClassification }) => {
-          lastInputText = getAssessmentText() || 'I have been feeling overwhelmed and stressed lately.';
-          renderResults(mockClassification(lastInputText), lastInputText);
-          showView('results');
-        });
-        return;
+        if (!lastResult) {
+          console.warn('No assessment result available.');
+          return;
+        }
+
+        renderResults(lastResult, lastInputText);
+        showView('results');
+        return; 
       }
 
       showView(flow);

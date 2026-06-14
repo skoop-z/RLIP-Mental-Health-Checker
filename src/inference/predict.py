@@ -79,36 +79,31 @@ def classify_text(text):
 
     return label, confidence
 
+def predict_pipeline(text):
+    lang = detect_language(text)
+    slang_check = detect_slang(text)
 
-print(model.config.id2label)
-print(model.config.label2id)
+    normalized = normalize_text(text)
 
+    if lang == "tl":
+        translated = translate_tl_to_en(normalized)
+    else:
+        translated = normalized
 
-text = input("Enter text: ")
+    print("\n--- DEBUG PIPELINE ---")
+    print("RAW INPUT:", text)
+    print("LANG:", lang)
+    print("NORMALIZED:", normalized)
+    print("TRANSLATED:", translated)
 
-lang = detect_language(text)
-slang_check = detect_slang(text)
+    label, confidence = classify_text(translated)
 
-normalized = normalize_text(text)
+    print("PREDICTION:", label, confidence)
 
-translated = None
-
-
-if lang == "tl":
-    translated = translate_tl_to_en(normalized)
-    print("\ntranslated:", translated)
-    model_input = translated
-else:
-    model_input = text
-
-
-label, confidence = classify_text(model_input)
-
-
-
-print("\n--- OUTPUT ---")
-print("Language:", lang)
-print("Slang words found:", slang_check)
-print("Final input to classifier:", model_input)
-print("Predicted label:", label)
-print("Confidence:", round(confidence, 4))
+    return {
+        "primary": label,
+        "confidence": confidence,
+        "language": lang,
+        "slang": slang_check,
+        "input_used": translated
+    }
